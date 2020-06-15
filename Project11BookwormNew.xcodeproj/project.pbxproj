@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6316C0C224970FF80075964E /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316C0C124970FF80075964E /* DetailView.swift */; };
+		6316C0C4249718610075964E /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6316C0C3249718610075964E /* RatingView.swift */; };
 		6394DBCB24958604005A87B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394DBCA24958604005A87B9 /* AppDelegate.swift */; };
 		6394DBCD24958604005A87B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394DBCC24958604005A87B9 /* SceneDelegate.swift */; };
 		6394DBD024958604005A87B9 /* Project11BookwormNew.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6394DBCE24958604005A87B9 /* Project11BookwormNew.xcdatamodeld */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6316C0C124970FF80075964E /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		6316C0C3249718610075964E /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		6394DBC724958604005A87B9 /* Project11BookwormNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project11BookwormNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6394DBCA24958604005A87B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6394DBCC24958604005A87B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				6394DBCA24958604005A87B9 /* AppDelegate.swift */,
 				6394DBCC24958604005A87B9 /* SceneDelegate.swift */,
 				6394DBD124958604005A87B9 /* ContentView.swift */,
+				6316C0C124970FF80075964E /* DetailView.swift */,
+				6316C0C3249718610075964E /* RatingView.swift */,
 				63C94EC42495D82A003D0363 /* AddBookView.swift */,
 				6394DBD324958604005A87B9 /* Assets.xcassets */,
 				6394DBD824958604005A87B9 /* LaunchScreen.storyboard */,
@@ -153,10 +159,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				6394DBCB24958604005A87B9 /* AppDelegate.swift in Sources */,
+				6316C0C224970FF80075964E /* DetailView.swift in Sources */,
 				6394DBCD24958604005A87B9 /* SceneDelegate.swift in Sources */,
 				6394DBD224958604005A87B9 /* ContentView.swift in Sources */,
 				6394DBD024958604005A87B9 /* Project11BookwormNew.xcdatamodeld in Sources */,
 				63C94EC52495D82A003D0363 /* AddBookView.swift in Sources */,
+				6316C0C4249718610075964E /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
