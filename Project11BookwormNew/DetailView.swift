@@ -10,7 +10,17 @@ import SwiftUI
 import CoreData
 
 struct DetailView: View {
+  @Environment(\.managedObjectContext) var moc
+  @Environment(\.presentationMode) var page
+  @State private var display = false
   let book: Book
+  
+  func deleteLable() {
+    moc.delete(book)
+    try? moc.save()
+    self.page.wrappedValue.dismiss()
+  }
+  
   var body: some View {
     GeometryReader { geometry in
       VStack {
@@ -29,20 +39,28 @@ struct DetailView: View {
         }
         
         Text(self.book.author ?? "Unknown author")
-            .font(.title)
-            .foregroundColor(.secondary)
-
+          .font(.title)
+          .foregroundColor(.secondary)
+        
         Text(self.book.review ?? "No review")
-            .padding()
-
+          .padding()
+        
         RatingView(rating: .constant(Int(self.book.rating)))
-            .font(.largeTitle)
-
+          .font(.largeTitle)
+        
         Spacer()
       }
     }
     .navigationBarTitle(Text(book.title ?? "Unknown Book"), displayMode: .inline)
+    .navigationBarItems(trailing: Button(action: {self.display.toggle()}){Image(systemName: "trash")}.foregroundColor(.red))
+    .alert(isPresented: self.$display) {
+      Alert(title: Text("Delete book"),
+            message: Text("Do you really want to delete this?"),
+            primaryButton: .destructive(Text("Confirm")){self.deleteLable()},
+            secondaryButton: .cancel())
+    }
   }
+  
 }
 
 struct DetailView_Previews: PreviewProvider {
